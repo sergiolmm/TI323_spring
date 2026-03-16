@@ -5,11 +5,9 @@ import org.springframework.web.bind.annotation.*;
 public class OlaController {
 
     // tela na raiz
-    @GetMapping("/ola")
+    @RequestMapping(method = RequestMethod.GET)
     public String ola() {
-	return "Alo Mundo de TI...";
+        return "Alo Mundo de TI...";
     }
-
-
 }
 
