@@ -1,8 +1,6 @@
 package br.com.slmm.aula1603;
 
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -25,7 +23,18 @@ public class OlaController {
         return "ola, Sr(a) " + nome + "!";
     }
     
-	
+
+	// Maps to -> GET http://localhost:8080/api/search?name=someName
+    @RequestMapping(value = "/search", method = RequestMethod.GET, params = {"name"})
+    public String searchUserByName(@RequestParam("name") String name) {
+        return "Searching for user with name: " + name;
+    }
+
+    // Maps to -> GET http://localhost:8080/api/pesquisa?name=someName
+    @GetMapping(value = "/pesquisa", params = {"name"})
+    public String searchUserByName2(@RequestParam("name") String name) {
+        return "Searching for user with name: " + name;
+    }
 
     
 }
