@@ -1,14 +1,12 @@
-import org.springframework.boot.*;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
-@RequestMapping("/");
+@RequestMapping("/api")
 public class OlaController {
 
     // tela na raiz
     @GetMapping("/ola")
-    public String home(){
+    public String ola() {
 	return "Alo Mundo de TI...";
     }
 
