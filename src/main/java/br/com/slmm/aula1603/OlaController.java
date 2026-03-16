@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/api")
 public class OlaController {
 
     // tela na raiz
