@@ -1,3 +1,5 @@
+package br.com.slmm.aula1603;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
