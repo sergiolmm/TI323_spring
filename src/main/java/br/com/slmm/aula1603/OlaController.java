@@ -25,12 +25,15 @@ public class OlaController {
     
 
 	// Maps to -> GET http://localhost:8080/api/search?name=someName
+    // Maps to -> GET http://localhost:8080/search?name=someName
     @RequestMapping(value = "/search", method = RequestMethod.GET, params = {"name"})
     public String searchUserByName(@RequestParam("name") String name) {
         return "Searching for user with name: " + name;
     }
 
     // Maps to -> GET http://localhost:8080/api/pesquisa?name=someName
+    // ou quando retirei a rota base api
+    // Maps to -> GET http://localhost:8080/pesquisa?name=someName
     @GetMapping(value = "/pesquisa", params = {"name"})
     public String searchUserByName2(@RequestParam("name") String name) {
         return "Searching for user with name: " + name;
