@@ -1,6 +1,9 @@
 package br.com.slmm.aula1603;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api")
@@ -11,5 +14,11 @@ public class OlaController {
     public String ola() {
         return "Alo Mundo de TI...";
     }
+
+    @GetMapping("/ola")
+    public String getOla() {
+        return "Ola para voce :) ";
+    }
+    
 }
 
